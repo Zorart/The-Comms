@@ -138,11 +138,13 @@ main{
     color: #6f1ac1;
 }
 .first-section{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: end;
     background-color: #f0e0ff;
     height: 600px;
+    z-index: 3;
 }
 .first-section:hover{
     .loom-logo{
