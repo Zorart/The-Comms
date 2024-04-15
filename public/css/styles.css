@@ -8,6 +8,7 @@
 }
 
 h1{
+    position: relative;
     font-size: 1.8em;
     font-weight: 800;
     line-height: 1.4em;
@@ -15,6 +16,7 @@ h1{
     color: #6f1ac1;
 }
 h3{
+    position: relative;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.4em;
@@ -26,11 +28,51 @@ body{
     background-color: #6f1ac1;
 }
 
-.header{
-    width: 100%;
+
+
+
+
+
+header{
     position: fixed;
-    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100px;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+    width: 79%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    background-position-x: center;
+    height: 80px;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
+.nav-links a:hover{
+    background-color: #6f1ac1;
+    color:white
 }
 
 .side-fixeds{
@@ -43,13 +85,18 @@ body{
     right: 0px;
 }
 
+
+
+
+
+
 a{
     background-color: white;
     display: flex;
     align-items: center;
 
     height: 40px;
-    padding: 15px 15px 10px 15px;
+    padding: 25px 15px 25px 15px;
     margin: 0px 5px;
     border-radius: 999px;
 
@@ -155,7 +202,7 @@ main{
     height: 450px;
     width: 450px;
     top: -35px;
-    right: -222px;
+    right: -150px;
     transition-delay: .2s;
     transition-duration: .4s;
     animation-name: lLogo-fade-in;
@@ -308,20 +355,21 @@ main{
     height: 650px;
     display: flex;
     background-color: #f0e0ff;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
 }
 .carrousel-text{
     position: relative;
     display: flex;
     height: 40%;
-    width: 75%;
-    margin-right: 250px;
+    height: 100%;
+    width: 60%;
+    padding: 125px 0px 125px 150px;
+    padding-left: 150px;
+    margin-right: 150px;
     flex-direction: column;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    margin-right: 50px;
+    justify-content: space-evenly;
+    text-align: left;
 }
 .carrousel-text h1, .carrousel-text h3{
     position: relative;
@@ -414,18 +462,20 @@ main{
 .text-side{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+    align-items: end;
+    height: 70%;
+    justify-content: space-evenly;
+    align-self: center;
+    text-align: right;
 }
 .text-side h1, .text-side h3{
     position: relative;
-    padding: 40px 20px 0px 30px;
+    padding-left: 50px;
 }
 .text-side a{
     position: relative;
     top: 100px;
-    align-self: center;
+    align-self: flex-end;
 }
 .mult-cards{
     display: flex;
@@ -495,6 +545,117 @@ main{
 .footer{
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+/*********************** ABOUT ME PAGE ***********************/
+
+
+
+
+.presentation{
+    height: 750px;
+    background-color: #f0e0ff;
+    display: flex;
+}
+.pres-text{
+    position: relative;
+    right: -10vw;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 100px 0px 50px 60px;
+}
+.t1, .t2, .t3, .t4, .t5{
+    animation-duration: 1s;
+    position: relative;
+    opacity: 0;
+}
+.t1{animation-delay: .4s;}
+.t2{animation-delay: .5s;}
+.t3{animation-delay: .6s;}
+.t4{animation-delay: .7s;}
+.t5{animation-delay: .8s;}
+
+.pres-img{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.pres-img img{
+    height: 90%;
+    width: 75%;
+}
+.fader{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    right: -10vw;
+    background-image: linear-gradient(to right, #f0e0ff 60%, rgba(255, 255, 255, 0) 90%); 
+}
+
+
+.presentation2{
+    height: 750px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../images/pres2.png");
+    background-repeat: no-repeat;
+}
+.pres2-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 50%;
+    margin-right: 70px;
+    align-self: flex-end;
+    text-align: center;
+    align-items: center;
+}
+.pres2-text a{
+    width: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************** CONTACT PAGE ***********************/
+
+
+
+
+
+.contact-caption{
+    background-color: red;
+}
+
+
+
+
 
 
 
