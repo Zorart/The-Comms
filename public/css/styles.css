@@ -649,8 +649,136 @@ main{
 
 
 
+.contact1{
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #f0e0ff;
+}
 .contact-caption{
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 91%;
+}
+.cont-img{
+    display: flex;
+    align-items: end;
+    width: 50%;
+    height: 100%;
+}
+.cont-fader{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    right: 10vw;
+    background-image: linear-gradient(to left, #f0e0ff 20%, rgba(255, 255, 255, 0) 100%); 
+}
+.cont-img img{
+    height: 90%;
+    width: 78%;
+}
+.cont-text{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-evenly;
+    height: 35%;
+    width: 40%;
+}
+.cont-text h1, .cont-text h3{
+    position: relative;
+    right: 10vw;
+    opacity: 0;
+    animation-duration: .8s;
+}
+.cont-text h1{
+    animation-delay: .4s;
+}
+.cont-text h3{
+    animation-delay: .5s;
+}
+
+
+.contact2{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    width: 100%;
+}
+.cont2-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 30px;
+    height: 570px;
+    width: 540px;
+}
+.cont-text2{margin-top: 100px;}
+
+.cont-text2 h1, .cont-text2 h3{
+    position: relative;
+    animation-duration: .8s;
+    opacity: 0;
+}
+.cont-text2 h1{animation-delay: .5s;}
+.cont-text2 h3{animation-delay: .6s;}
+
+.cont-buttons{
+    position: relative;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    animation-duration: .8s;
+    animation-delay: .2s;
+    opacity: 0;
+}
+.wsp-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #25d366;
+    font-weight: 400;
+    margin: 0px;
+}
+.wsp-button i{
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+.gmail-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0px;
+    border: 2px red solid;
+}
+.gmail-button i{
+    color: red;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+.insta-preview{
+    position: relative;
+    width: 540px;
+    height: 570px;
+    border-radius: 5%;
+    margin-right: 30px;
+    border: #6f1ac1 solid 3px;
+    animation-duration: .8s;
+    animation-delay: .3s;
+    opacity: 0;
 }
 
 
