@@ -30,6 +30,7 @@ h3 b{
 
 body{
     background-color: #6f1ac1;
+    overflow-x: hidden;
 }
 
 .index-intro{
@@ -470,7 +471,7 @@ main{
     display: flex;
     position: relative;
     height: 750px;
-    background-color: white;
+    background-color: #d0eefd;
     width: 100%;
 
 }
@@ -589,8 +590,9 @@ main{
 
 .presentation{
     height: 750px;
-    background-color: #f0e0ff;
+    background-color: #cc88ff;
     display: flex;
+    justify-content: space-between;
 }
 .pres-text{
     position: relative;
@@ -607,6 +609,7 @@ main{
     animation-duration: 1s;
     position: relative;
     opacity: 0;
+    color: white;
 }
 .t1{animation-delay: .4s;}
 .t2{animation-delay: .5s;}
@@ -614,22 +617,10 @@ main{
 .t4{animation-delay: .7s;}
 .t5{animation-delay: .8s;}
 
-.pres-img{
-    width: 50%;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-}
-.pres-img img{
-    height: 90%;
-    width: 75%;
-}
-.fader{
-    position: relative;
+.presentation img{
     height: 100%;
-    width: 100%;
-    right: -10vw;
-    background-image: linear-gradient(to right, #f0e0ff 60%, rgba(255, 255, 255, 0) 90%); 
+    width: 30%;
+    mask-image: linear-gradient(to left, black 80%, transparent);
 }
 
 
@@ -700,26 +691,27 @@ main{
     height: 650px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
-    background-color: #f0e0ff;
+    background-color: #4d61f4;
+    h1, h3{
+        color: #d7ff7b;
+        animation-duration: .5s;
+        animation-delay: .2s;
+        animation-timing-function: ease-out;
+    }
 }
 .contact-caption{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 91%;
+    justify-content: center;
+    height: 100%;
 }
 .cont-img{
     display: flex;
     align-items: end;
     width: 50%;
     height: 100%;
-}
-.cont-img img{
-    height: 90%;
-    width: 78%;
-    mask-image: linear-gradient(to right, black 80%, transparent);
 }
 .cont-text{
     display: flex;
@@ -728,28 +720,19 @@ main{
     justify-content: space-evenly;
     height: 35%;
     width: 40%;
-}
-.cont-text h1, .cont-text h3{
-    position: relative;
-    right: 10vw;
-    opacity: 0;
-    animation-duration: .8s;
-}
-.cont-text h1{
-    animation-delay: .4s;
-}
-.cont-text h3{
-    animation-delay: .5s;
+    text-align: center;
 }
 
 
 .contact2{
-    background-color: white;
+    position: relative;
+    background-color: #cc88ff;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 750px;
     width: 100%;
+    z-index: 2;
 }
 .cont2-links{
     display: flex;
@@ -760,7 +743,12 @@ main{
     height: 570px;
     width: 540px;
 }
-.cont-text2{margin-top: 100px;}
+.cont-text2{
+    margin-top: 100px;
+    h1, h3{
+        color: white;
+    }
+}
 
 .cont-text2 h1, .cont-text2 h3{
     position: relative;
@@ -819,6 +807,7 @@ main{
     border: #6f1ac1 solid 3px;
     animation-duration: .8s;
     animation-delay: .3s;
+    box-shadow: -10px 10px 0px 0px #e07b99;
     opacity: 0;
 }
 
@@ -855,11 +844,9 @@ main{
     margin-top: 120px;
     height: 80%;
     width: 40%;
+    text-align: center;
 }
 .plans-text h1, .plans-text h3{
-    position: relative;
-    right: 10vw;
-    opacity: 0;
     animation-duration: .8s;
 }
 .plans-text h1{
@@ -872,15 +859,29 @@ main{
 .plans2{
     height: 1900px;
     padding: 50px;
-    background-color: #f0e0ff;
+    background-color: #ff6700;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.plans2 h1{
     position: relative;
+    z-index: 1;
+    h1{
+        position: relative;
+        animation-duration: .8s;
+        animation-delay: .4s;
+        opacity: 0;
+    }
+}
+.plans2-img{
+    position: absolute; 
+    height: 50px; 
+    width: 350px; 
+    top: 40px;
     animation-duration: .8s;
     animation-delay: .4s;
+    animation-name: move-in-bot;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
     opacity: 0;
 }
 
@@ -901,25 +902,21 @@ main{
     opacity: 0;
 }
 
-.plans2-art1{
-    box-shadow: #ffb17d -10px 10px 10px;
+.plans2-art1, .plans2-art3{
+    box-shadow: #e07b99 -10px 10px 0px;
+    border: 5px solid #d7ff7b;
     align-self: flex-start;
 }
 .plans2-art2{
-    box-shadow: #ffb17d 10px 10px 10px;
+    box-shadow: #e07b99 10px 10px 0px;
+    border: 5px solid #d7ff7b;
     align-self: flex-end;
-}
-.plans2-art3{
-    box-shadow: #ffb17d -10px 10px 10px;
-    align-self: flex-start;
 }
 .plans2-art h2{
     font-size: 1.4em;
     font-weight: 800;
     line-height: 1.4em;
     font-family: brice;
-    background-image: url(../images/plans-h2-decoration.png);
-    background-repeat: no-repeat;
 }
 
 .ap1{
@@ -980,6 +977,8 @@ main{
     flex-wrap: wrap;
     background-color: #d7ff7b;
     padding: 50px;
+    position: relative;
+    z-index: 1;
 }
 .services-2 h1{
     width: 100%;
@@ -991,7 +990,7 @@ main{
     padding: 40px 60px 10px 60px;
     border-radius: 20px;
     margin: 50px;
-    box-shadow: 0px 10px 10px -5px gray;
+    box-shadow: 8px 10px 0px 0px #4d61f4;
     animation-duration: .6s;
     animation-delay: .2s;
 }
